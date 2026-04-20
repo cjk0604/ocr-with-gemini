@@ -1,5 +1,9 @@
 # OCR with Gemini
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cjk0604/ocr-with-gemini/blob/main/ocr_with_gemini.ipynb)
+[![Open In Colab Enterprise](https://img.shields.io/badge/Colab_Enterprise-Open-blue?logo=google-cloud)](https://console.cloud.google.com/vertex-ai/colab/import/github/cjk0604/ocr-with-gemini/blob/main/ocr_with_gemini.ipynb)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_Source-black?logo=github)](https://github.com/cjk0604/ocr-with-gemini/blob/main/ocr_with_gemini.ipynb)
+
 Google Gemini 모델을 활용하여 상품 이미지에서 바코드(GTIN, UPC, EAN 등)를 인식하고, 상품명/상세 정보를 자동으로 추출하는 핸즈온 노트북입니다.
 
 ## 주요 기능
@@ -41,8 +45,14 @@ client = genai.Client(
 ## 설치 및 실행
 
 ```bash
-pip install google-genai ultralytics Pillow
+pip install google-genai opencv-python Pillow
 ```
+
+| 패키지 | 역할 |
+|--------|------|
+| `google-genai` | Google Gemini API 클라이언트. Vertex AI를 통해 Gemini 모델에 텍스트/이미지를 전송하고 추론 결과를 받아옵니다. |
+| `opencv-python` | 이미지 읽기, 색상 변환, bounding box 그리기 등 컴퓨터 비전 처리에 사용합니다. |
+| `Pillow` | Python 이미지 처리 라이브러리(PIL). 이미지를 열고, 변환하고, 노트북에서 출력하는 데 사용합니다. |
 
 `ocr_with_gemini.ipynb` 노트북을 Jupyter 또는 Google Colab에서 열어 셀을 순서대로 실행합니다.
 
