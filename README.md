@@ -1,8 +1,14 @@
 # OCR with Gemini
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cjk0604/ocr-with-gemini/blob/main/ocr_with_gemini.ipynb)
-[![Open In Colab Enterprise](https://img.shields.io/badge/Colab_Enterprise-Open-blue?logo=google-cloud)](https://console.cloud.google.com/vertex-ai/colab/import/github/cjk0604/ocr-with-gemini/blob/main/ocr_with_gemini.ipynb)
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_Source-black?logo=github)](https://github.com/cjk0604/ocr-with-gemini/blob/main/ocr_with_gemini.ipynb)
+<a href="https://colab.research.google.com/github/cjk0604/ocr-with-gemini/blob/main/ocr_with_gemini.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+</a>
+<a href="https://console.cloud.google.com/vertex-ai/colab/import/https:%2F%2Fraw.githubusercontent.com%2Fcjk0604%2Focr-with-gemini%2Fmain%2Focr_with_gemini.ipynb">
+  <img src="https://img.shields.io/badge/Colab_Enterprise-Open-blue?logo=google-cloud" alt="Open In Colab Enterprise">
+</a>
+<a href="https://github.com/cjk0604/ocr-with-gemini/blob/main/ocr_with_gemini.ipynb">
+  <img src="https://img.shields.io/badge/GitHub-View_Source-black?logo=github" alt="View on GitHub">
+</a>
 
 Google Gemini 모델을 활용하여 상품 이미지에서 바코드(GTIN, UPC, EAN 등)를 인식하고, 상품명/상세 정보를 자동으로 추출하는 핸즈온 노트북입니다.
 
