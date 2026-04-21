@@ -1,5 +1,6 @@
 # OCR with Gemini API or Google Cloud Vision AI
 
+Gemini API:
 <a href="https://colab.research.google.com/github/cjk0604/ocr-with-gemini/blob/main/ocr_with_gemini.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Gemini In Colab">
 </a>
@@ -10,6 +11,7 @@
   <img src="https://img.shields.io/badge/GitHub-View_Source-black?logo=github" alt="View on GitHub">
 </a>
 <br>
+Cloud Vision AI: 
 <a href="https://colab.research.google.com/github/cjk0604/ocr-with-gemini/blob/main/ocr_with_cloud_vision.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Cloud Vision In Colab">
 </a>
