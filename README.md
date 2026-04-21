@@ -1,4 +1,4 @@
-# OCR with Google Cloud AI
+# OCR with Gemini API or Google Cloud Vision AI
 
 <a href="https://colab.research.google.com/github/cjk0604/ocr-with-gemini/blob/main/ocr_with_gemini.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Gemini In Colab">
@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/GitHub-View_Source-black?logo=github" alt="View on GitHub">
 </a>
 
-Google Cloud AI를 활용하여 상품 이미지에서 바코드(GTIN, UPC, EAN 등)를 인식하고, 상품명/상세 정보를 자동으로 추출하는 핸즈온 노트북 모음입니다.
+Gemini API 또는 Google Cloud Vision AI를 활용하여 상품 이미지에서 바코드(GTIN, UPC, EAN 등)를 인식하고, 상품명/상세 정보를 자동으로 추출하는 핸즈온 노트북 모음입니다.
 
 ## 노트북 목록
 
