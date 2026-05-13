@@ -22,6 +22,17 @@ Cloud Vision AI:
   <img src="https://img.shields.io/badge/GitHub-View_Source-black?logo=github" alt="View on GitHub">
 </a>
 <br>
+Gemini OCR + Veo 3.1:
+<a href="https://colab.research.google.com/github/cjk0604/ocr-with-gemini/blob/main/ocr_to_video_with_veo.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Veo In Colab">
+</a>
+<a href="https://console.cloud.google.com/vertex-ai/colab/import/https:%2F%2Fraw.githubusercontent.com%2Fcjk0604%2Focr-with-gemini%2Fmain%2Focr_to_video_with_veo.ipynb">
+  <img src="https://img.shields.io/badge/Colab_Enterprise-Open-blue?logo=google-cloud" alt="Open In Colab Enterprise">
+</a>
+<a href="https://github.com/cjk0604/ocr-with-gemini/blob/main/ocr_to_video_with_veo.ipynb">
+  <img src="https://img.shields.io/badge/GitHub-View_Source-black?logo=github" alt="View on GitHub">
+</a>
+<br>
 Document AI: 
 <a href="https://colab.research.google.com/github/cjk0604/ocr-with-gemini/blob/main/ocr_with_document_ai.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Document AI In Colab">
@@ -34,6 +45,7 @@ Document AI:
 </a>
 
 Gemini API, Cloud Vision AI, 또는 Document AI를 활용하여 상품 이미지에서 바코드(GTIN, UPC, EAN 등)를 인식하고, 상품명/상세 정보를 자동으로 추출하는 핸즈온 노트북 모음입니다.
+Gemini OCR + Veo 3.1을 연계하여 상품 이미지에서 브랜드 홍보 영상을 자동 생성하는 유즈케이스도 포함합니다.
 
 ## 노트북 목록
 
@@ -42,6 +54,7 @@ Gemini API, Cloud Vision AI, 또는 Document AI를 활용하여 상품 이미지
 | `ocr_with_gemini.ipynb` | Gemini (Vertex AI) | 생성형 AI 기반 OCR — 프롬프트로 바코드 해석 및 상품 정보 추론 |
 | `ocr_with_cloud_vision.ipynb` | Cloud Vision API | 전통적 CV/ML 기반 OCR — TEXT/LABEL/LOGO/OBJECT Detection |
 | `ocr_with_document_ai.ipynb` | Document AI | 문서 특화 OCR — 바코드 네이티브 감지 + Layout Parser Chunking |
+| `ocr_to_video_with_veo.ipynb` | Gemini + Veo 3.1 | OCR 텍스트/위치 추출 → Veo 3.1 브랜드 홍보 영상 생성 |
 
 ## 주요 기능
 
@@ -52,6 +65,7 @@ Gemini API, Cloud Vision AI, 또는 Document AI를 활용하여 상품 이미지
 - **바코드 네이티브 감지** — 바코드 형식/값 직접 반환, 정규식 불필요 (Document AI)
 - **Layout Parser + Chunking** — 문서 구조 분석 및 의미 단위 분할, RAG 파이프라인에 활용 (Document AI)
 - **Batch 처리** — 여러 이미지를 한 번의 API 호출로 일괄 분석 (Cloud Vision)
+- **OCR → 영상 생성** — Gemini OCR 텍스트/위치 추출 + Veo 3.1 브랜드 홍보 영상 자동 생성
 
 ## 노트북 비교
 
@@ -181,6 +195,17 @@ pip install google-cloud-documentai opencv-python Pillow
 | 4. Layout Parser | 문서 구조 분석, Chunking으로 의미 단위 분할, PDF 처리 |
 | 5. GTIN/UPC 추출 | 바코드 + OCR 텍스트 결합, 구조화된 JSON 상품 정보 기록 |
 
+### `ocr_to_video_with_veo.ipynb`
+
+| 섹션 | 내용 |
+|------|------|
+| 1. Setup | 라이브러리 설치, Gemini + Veo 3.1 클라이언트 초기화 |
+| 2. 공통 함수 | `inference`, `read_image`, `draw_boxes`, `clean_results` |
+| 3. OCR 추출 | 텍스트 + 위치 정보(bounding box) + 역할 분류 + 상품 종합 분석 |
+| 4. 프롬프트 생성 | OCR 결과 기반 Veo 3.1 프롬프트 자동 구성 + Gemini 프롬프트 최적화 |
+| 5. 영상 생성 | Image-to-Video / Reference Image 두 가지 방식으로 브랜드 홍보 영상 생성 |
+| 6. 커스텀 테스트 | 나만의 상품 이미지로 전체 파이프라인 실행 |
+
 ## 프로젝트 구조
 
 ```
@@ -188,6 +213,7 @@ ocr_with_gemini/
 ├── ocr_with_gemini.ipynb         # Gemini 기반 핸즈온 노트북
 ├── ocr_with_cloud_vision.ipynb   # Cloud Vision 기반 핸즈온 노트북
 ├── ocr_with_document_ai.ipynb    # Document AI 기반 핸즈온 노트북
+├── ocr_to_video_with_veo.ipynb   # Gemini OCR + Veo 3.1 영상 생성 노트북
 ├── README.md
 └── .gitignore
 ```
